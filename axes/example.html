@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./axes.css" />
+<body>
+    <div class="container">
+        <div class="text"><h2>Axes Example</h2></div>
+        <div id="paint"></div>
+    </div>
+<!-- d3 -->
+<script src="./static/d3js.org/d3.min.js"></script>
+<script src="./axes.js"></script>
+<script>
+
+    // data
+    var divergedData = [
+        {
+            name: 'question1',
+            x: 2,
+            y: 6
+        },
+        {
+            name: 'question2',
+            x: 5,
+            y: 5.5
+        },
+        {
+            name: 'question3',
+            x: 3,
+            y: 7.2
+        },
+        {
+            name: 'question4',
+            x: 1,
+            y: 4
+        },
+        {
+            name: 'question5',
+            x: 7,
+            y: 8
+        }];
+
+var chart = new Axes(divergedData);
+chart.xMax = 10;
+chart.xMin = -1;
+chart.yMax = 10;
+chart.yMin = -2;
+chart.xAxisName = "XXXXXXX";
+chart.yAxisName = "YYYYYY";
+chart.drawChart('#paint');
+
+</script>
+</body>
